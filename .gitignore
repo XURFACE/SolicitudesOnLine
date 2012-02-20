@@ -1,0 +1,51 @@
+# Mercurial .hgignore file for C# / .NET / VisualStudio 2010
+# Originally from: http://stackoverflow.com/questions/34784/mercurial-hgignore-for-visual-studio-2008-projects
+
+# use glob syntax
+syntax: glob
+#parte 1
+# Solution User Options
+*.suo
+
+# Project User Options
+*.user
+
+# Build Directories
+bin/
+obj/
+#parte 2
+# .webinfo files are user-specific mappings for project endpoints
+# http://support.microsoft.com/kb/830611
+*.webinfo
+*.config 
+
+# Ignore Visual Studio files
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.scc
+[Bb]in
+[Dd]ebug*/
+[Oo]bj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+[Bb]uild[Ll]og.*
+*.[Pp]ublish.xml
+[Tt]humbs.db
