@@ -1,0 +1,36 @@
+﻿Imports MP.DW.BL
+Imports MP.DW.BL.BC
+Imports MP.DW.UTL.clsUTL_Helpers
+Imports System.Data
+Partial Class mdlRegistro_addProd
+    Inherits System.Web.UI.Page
+
+    Protected Sub btn_add_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btn_add.Click
+
+        Dim solicitudPro As New BE.clsBE_SOLICITUD
+        Dim cllProductos As New List(Of BE.clsBE_PRODUCTO)
+        Dim objProd As New BE.clsBE_PRODUCTO
+        If Not IsNothing(Session("cllObjProductos")) Then
+            cllProductos = CType(Session("cllObjProductos"), List(Of BE.clsBE_PRODUCTO))
+        Else
+            Session("cllObjProductos") = cllProductos
+        End If
+
+
+
+        objProd.strMARCA = txtMarca.Text
+        objProd.strNOMBRE = txtNombre.Text
+        objProd.dblPORC_FABRICACION = txtPorcFabri.Text
+        objProd.dblPORC_UNIDVENC = txtPorcUnd.Text
+        objProd.dblPORC_VALORVENTA = txtPorcUnd.Text
+
+        cllProductos.Add(objProd)
+
+        Session("cllObjProductos") = cllProductos
+
+
+
+        ScriptManager.RegisterStartupScript(Me, Me.GetType, "", "parent.document.location = 'WFRM_Paso06.aspx'", True)
+
+    End Sub
+End Class

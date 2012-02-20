@@ -1,0 +1,186 @@
+
+/*
+Header
+*/
+
+.bg-wrapper {
+  height: 139px;
+ width:950px; margin: 0 auto;
+}
+
+#header {
+  height: 139px;
+  width:857px;
+  z-index: 1000 !important;
+}
+
+body.schedule div#header {
+  background: #6a2100 !important;
+}
+
+
+#header #follow-us li {
+  float: left;
+  margin: 0 3px;
+}
+
+#header #follow-us li.title {
+  text-transform: uppercase;
+  font-size: 11px;
+  margin: 5px 10px 0 0;
+}
+
+#header #follow-us li a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../images/follow-us.png);
+  text-indent: -999em;
+  /*font-family: 'Bree';*/
+}
+
+#header #follow-us li a.flags {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-indent: -999em;
+   background: url(../images/B_usa.png);
+  /*font-family: 'Bree';*/
+}
+#header #follow-us li a.flags1 {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-indent: -999em;
+  background: url(../images/bandera1_peru.png);
+  /*font-family: 'Bree';*/
+}
+
+
+
+
+#menu
+{
+    float:right;
+    margin-top:50px;
+ }
+#menu li {
+margin: 0 24px;
+   float:left;
+     list-style:none;
+ 
+}
+
+#menu li a {
+  text-transform: uppercase;
+  font-size: 13px;
+  float:left;
+  /*font-family: 'Bree';*/
+  text-decoration: none;
+  font-weight: lighter;
+  color: #fffcf4;
+}
+
+#menu li a:hover {
+  
+  color: #f8fcb8;
+}
+
+#menu li span {
+  display:block;
+  font-size: 19px;
+  font-weight: lighter;
+  margin-top:4px;
+}
+
+/*
+//header
+*/
+
+/*
+generales
+*/
+
+
+
+
+
+
+
+
+/*
+Logo
+*/
+h1#logo {
+  background: url(../images/logo-marcaperu.png);
+  height: 98px;
+  width: 164px;
+  float: left;
+  margin-top:20px;
+}
+
+
+/*
+Header
+*/
+
+
+
+#bg-header {
+  position: fixed;
+  height: 255px;
+  top:0px;
+  left:0;
+  right: 18px;
+  background: url(../images/bg-header.png) right top no-repeat;
+}
+
+
+
+
+
+
+#header #menu li,
+#header #follow-us li{
+  float: left;
+}
+
+#menu li {
+  margin: 0 14px;
+}
+
+#menu li a {
+  text-transform: uppercase;
+  font-size: 13px;
+  float:left;
+  /*font-family: 'Bree';*/
+  text-decoration: none;
+  font-weight: ligggrgin: 0 18px;
+}
+
+#menu li a {
+  text-transform: uppercase;
+  font-size: 13px;
+  float:left;
+  /*font-family: 'Bree';*/
+  text-decoration: none;
+  font-weight: lighter;
+  color: #fffcf4;
+}
+
+#menu li a:hover {
+  
+  color: #f8fcb8;
+}
+
+#menu li span {
+  display:block;
+  font-size: 19px;
+  font-weight: lighter;
+  margin-top:4px;
+}
+
+/*
+//header
+*/
+

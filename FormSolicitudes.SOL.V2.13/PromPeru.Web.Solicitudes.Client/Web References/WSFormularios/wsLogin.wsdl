@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xusr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="xpwd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ejemplos">
+        <s:complexType />
+      </s:element>
+      <s:element name="ejemplosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ejemplosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PreguntasFrecuentes">
+        <s:complexType />
+      </s:element>
+      <s:element name="PreguntasFrecuentesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PreguntasFrecuentesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="ejemplosSoapIn">
+    <wsdl:part name="parameters" element="tns:ejemplos" />
+  </wsdl:message>
+  <wsdl:message name="ejemplosSoapOut">
+    <wsdl:part name="parameters" element="tns:ejemplosResponse" />
+  </wsdl:message>
+  <wsdl:message name="PreguntasFrecuentesSoapIn">
+    <wsdl:part name="parameters" element="tns:PreguntasFrecuentes" />
+  </wsdl:message>
+  <wsdl:message name="PreguntasFrecuentesSoapOut">
+    <wsdl:part name="parameters" element="tns:PreguntasFrecuentesResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetIn">
+    <wsdl:part name="xusr" type="s:string" />
+    <wsdl:part name="xpwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ejemplosHttpGetIn" />
+  <wsdl:message name="ejemplosHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="PreguntasFrecuentesHttpGetIn" />
+  <wsdl:message name="PreguntasFrecuentesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostIn">
+    <wsdl:part name="xusr" type="s:string" />
+    <wsdl:part name="xpwd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="LoginHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="ejemplosHttpPostIn" />
+  <wsdl:message name="ejemplosHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="PreguntasFrecuentesHttpPostIn" />
+  <wsdl:message name="PreguntasFrecuentesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="wsLoginSoap">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ejemplos">
+      <wsdl:input message="tns:ejemplosSoapIn" />
+      <wsdl:output message="tns:ejemplosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PreguntasFrecuentes">
+      <wsdl:input message="tns:PreguntasFrecuentesSoapIn" />
+      <wsdl:output message="tns:PreguntasFrecuentesSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsLoginHttpGet">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpGetIn" />
+      <wsdl:output message="tns:LoginHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ejemplos">
+      <wsdl:input message="tns:ejemplosHttpGetIn" />
+      <wsdl:output message="tns:ejemplosHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PreguntasFrecuentes">
+      <wsdl:input message="tns:PreguntasFrecuentesHttpGetIn" />
+      <wsdl:output message="tns:PreguntasFrecuentesHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="wsLoginHttpPost">
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginHttpPostIn" />
+      <wsdl:output message="tns:LoginHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ejemplos">
+      <wsdl:input message="tns:ejemplosHttpPostIn" />
+      <wsdl:output message="tns:ejemplosHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PreguntasFrecuentes">
+      <wsdl:input message="tns:PreguntasFrecuentesHttpPostIn" />
+      <wsdl:output message="tns:PreguntasFrecuentesHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsLoginSoap" type="tns:wsLoginSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejemplos">
+      <soap:operation soapAction="http://tempuri.org/ejemplos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreguntasFrecuentes">
+      <soap:operation soapAction="http://tempuri.org/PreguntasFrecuentes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsLoginSoap12" type="tns:wsLoginSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://tempuri.org/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejemplos">
+      <soap12:operation soapAction="http://tempuri.org/ejemplos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreguntasFrecuentes">
+      <soap12:operation soapAction="http://tempuri.org/PreguntasFrecuentes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsLoginHttpGet" type="tns:wsLoginHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejemplos">
+      <http:operation location="/ejemplos" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreguntasFrecuentes">
+      <http:operation location="/PreguntasFrecuentes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsLoginHttpPost" type="tns:wsLoginHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Login">
+      <http:operation location="/Login" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ejemplos">
+      <http:operation location="/ejemplos" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PreguntasFrecuentes">
+      <http:operation location="/PreguntasFrecuentes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsLogin">
+    <wsdl:port name="wsLoginSoap" binding="tns:wsLoginSoap">
+      <soap:address location="http://localhost:43268/wsLogin.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsLoginSoap12" binding="tns:wsLoginSoap12">
+      <soap12:address location="http://localhost:43268/wsLogin.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsLoginHttpGet" binding="tns:wsLoginHttpGet">
+      <http:address location="http://localhost:43268/wsLogin.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsLoginHttpPost" binding="tns:wsLoginHttpPost">
+      <http:address location="http://localhost:43268/wsLogin.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,317 @@
+/*  RESET*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    vertical-align: baseline;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #666;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+{
+    display: block;
+}
+body
+{
+    line-height: 1;
+    background: #ee2e24;
+}
+ul
+{
+    list-style: none;
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a
+{
+    color: #ee2e24;
+}
+.clear
+{
+    clear: both;
+}
+
+h3
+{
+    font-size: 16px;
+    line-height: 2;
+}
+
+/*form*/
+button
+{
+    margin: 0 10px;
+    padding: 6px 18px;
+    background: #ee2e24;
+    color: #fff;
+    border: none;
+}
+input
+{
+    padding: 5px;
+    border: 1px #ccc solid;
+    margin-bottom: 15px;
+}
+textarea
+{
+    color: #666;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    max-width: 620px;
+}
+
+/*CSS*/
+.container
+{
+    width: 837px;
+    margin: 0 auto;
+    padding: 30px 10px;
+    background: #fff;
+}
+
+/*Navigation*/
+.navigation ul
+{
+    height: 35px;
+    width: 830px;
+    margin: 0 auto;
+}
+.navigation li
+{
+    float: left;
+}
+.navigation a
+{
+    color: #666;
+    background: url(../images/sprite-button-navi.png);
+    background-position: -75px -35px;
+    display: block;
+    width: 67px;
+    height: 27px;
+    padding-top: 8px;
+    padding-left: 18px;
+    margin-right: -15px;
+}
+.navigation a span
+{
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #eee;
+}
+
+.navigation a:hover
+{
+    background: url(../images/sprite-button-navi.png);
+    background-position: -75px 0px;
+    color: #fff;
+}
+.navigation a:hover span
+{
+    color: #ee2e24;
+}
+
+.navigation a.active
+{
+    background: url(../images/sprite-button-navi.png);
+    background-position: -75px 0px;
+    color: #fff;
+}
+.navigation a.active span
+{
+    color: #ee2e24;
+}
+
+/*navi --> left button*/
+.navigation a.active-left, .navigation a.inactive-left
+{
+    width: 67px;
+    padding-left: 8px;
+}
+/*active*/
+.navigation a.active-left
+{
+    background: url(../images/sprite-button-navi.png) no-repeat;
+    color: #fff;
+}
+.navigation a.active-left span
+{
+    color: #ee2e24;
+}
+/*inactive*/
+.navigation a.inactive-left
+{
+    width: 67px;
+    background: url(../images/sprite-button-navi.png) no-repeat;
+    background-position: 0 -35px;
+    padding-left: 8px;
+}
+.navigation a.inective-left span
+{
+    color: #ee2e24;
+}
+/*hover*/
+.navigation a.inactive-left:hover
+{
+    background: url(../images/sprite-button-navi.png) no-repeat;
+    color: #fff;
+}
+.navigation a.inactive-left:hover span
+{
+    color: #ee2e24;
+}
+
+
+/*ContentForm*/
+.content-form
+{
+    padding: 10px 80px;
+    margin-top: 30px;
+}
+.content-info
+{
+    padding-bottom: 50px;
+}
+.content-info p
+{
+    padding: 10px 0 20px 0;
+}
+.content-info p.radio-check
+{
+    padding-left: 80px;
+}
+
+h3.title
+{
+    color: #ee2e24;
+    font-weight: bold;
+}
+
+.button-content
+{
+    width: 250px;
+    margin: 0 auto;
+}
+.button-content-large
+{
+    width: 480px;
+    margin: 0 auto;
+}
+
+
+/* input[type=radio],input[type=checkbox]*/
+.content-info label + p, .content-info input[type=radio], input[type=checkbox] + p
+{
+    margin-top: 20px;
+}
+.content-info p > input[type=radio], input[type=checkbox]
+{
+    padding: 0;
+    margin: 0;
+    height: 16px;
+    width: 16px;
+    float: left;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+.content-info p > label
+{
+    line-height: 16px;
+    padding: 2px 0 0 24px;
+    height: 16px;
+    width: 16px;
+}
+/*input[type=radio]*/
+.content-info p:not(#foo) > input[type=radio] + label
+{
+    background: url(../images/sprite-rd-ck.png) 0 0px no-repeat;
+    width: 5px;
+}
+.content-info p:not(#foo) > input[type=radio] + label
+{
+    background-position: 0 0;
+}
+.content-info p:not(#foo) > input[type=radio]:checked + label
+{
+    background-position: 0 -17px;
+}
+/*,input[type=checkbox]*/
+.content-info p:not(#foo) > input[type=checkbox] + label
+{
+    background: url(../images/sprite-rd-ck.png) 0 -34px no-repeat;
+    width: 5px;
+}
+.content-info p:not(#foo) > input[type=checkbox] + label
+{
+    background-position: 0 -17;
+}
+.content-info p:not(#foo) > input[type=checkbox]:checked + label
+{
+    background-position: 0 -52px;
+}
+/*botton*/
+.button
+{
+    background: #ee2e24;
+    color: #fff;
+    border: none;
+    width: 100px;
+    height: 30px;
+    padding: 0 15px 0 0;
+    font-size: 12px;
+    text-align: center;
+    background: transparent url(../images/sprite-button.png) no-repeat 0 0px;
+}
+button
+{
+    width: 100px;
+    height: 30px;
+    padding: 0 15px 0 0;
+    margin-right: 5px;
+    font-size: 12px;
+    text-align: center;
+    background: transparent url(../images/sprite-button.png) no-repeat 0 0px;
+}
+.button:hover
+{
+    background-position: -100px 0px;
+}
+button:hover
+{
+    background-position: -100px 0px;
+}
+
+button#large
+{
+    width: 200px;
+    background: transparent url(../images/sprite-button.png) no-repeat 0px -30px;
+}
+button#large:hover
+{
+    background-position: 0px -60px;
+}
+.msgerror
+{
+    background-color:#ffe6e6;
+    color: Red;
+    width: 100%;
+    text-align: center;
+    padding:5px;
+}
+.msgCorrecto
+{
+    background-color:#bef1b1;
+    color: #009999;
+    width: 100%;
+    text-align: center;
+    padding:5px;
+}

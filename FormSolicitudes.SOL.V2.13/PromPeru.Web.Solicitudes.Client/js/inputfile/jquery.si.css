@@ -1,0 +1,62 @@
+div.si{width:auto;}
+div.si label.cabinet {
+	width: 108px;
+	height: 24px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	z-index: 3;
+	float: left;
+    margin-bottom:17px;
+    margin-left:0px;
+
+   
+}
+div.si label.cabinet:hover{cursor:pointer;}
+div.si label.cabinet input {
+	position: relative;
+	left: -140px;
+	top: 0;                                                        
+	height: 100%;
+	width: auto !important;
+	z-index: 2;
+	opacity: 0;
+	-moz-opacity: 0;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+div.si div.uploadButton {
+	position: relative;
+	float: left;
+}
+div.si div.uploadButton div {
+	width: 130px;
+	height: 24px;
+	background: url(../../images/btn_examinar.png) 0 0 no-repeat;
+	left: -130px;
+	position: absolute;
+
+	z-index: 1;
+}
+
+div.si div.uploadButton div.ruc {
+	width: 130px;
+	height: 24px;
+	background: url(../../images/fileuploader-ruc.jpg) 0 0 no-repeat;
+	left: -130px;
+	position: absolute;
+	z-index: 1;
+}
+div.si div.uploadButton div.dni {
+	width: 130px;
+	height: 24px;
+	background: url(../../images/fileuploader-dni.jpg) 0 0 no-repeat;
+	left: -130px;
+	position: absolute;
+	z-index: 1;
+}
+div.si div.uploadButton div:hover{cursor:pointer;}
+div.si label.selectedFile {
+	margin-left: 5px;
+	line-height: 24px;
+	font-size:12px;
+}

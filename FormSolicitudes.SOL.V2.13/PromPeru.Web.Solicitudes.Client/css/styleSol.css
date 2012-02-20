@@ -1,0 +1,52 @@
+/*  RESET*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+	font-size: 12px;
+	font-family: verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {	display: block;}
+body {line-height: 22px; background: #fff;}
+ul {list-style: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+.clear{clear:both;}
+h1{font-size:30px;font-weight:bold;color:#d28c1b;margin-top:5px;}
+h2{font-size:24px; line-height:26px;}
+h3{font-size: 18px;}
+h3.title{color:#E88D00;}
+h3.subtitle{color:#002168}
+h4{font-size: 14px; font-weight:bold;}
+/***********************************************************************************/
+
+/*Font*/
+@font-face {
+    font-family: 'Bree';
+    src: url('http://alpha-theia.heroku.com.s3.amazonaws.com/sites/4d7003605b30553c28000005/theme/fonts/breeregular-webfont.eot');
+    src: url('http://alpha-theia.heroku.com.s3.amazonaws.com/sites/4d7003605b30553c28000005/theme/fonts/breeregular-webfont.eot?iefix') format('eot'),
+         url('http://alpha-theia.heroku.com.s3.amazonaws.com/sites/4d7003605b30553c28000005/theme/fonts/breeregular-webfont.woff') format('woff'),
+         url('http://alpha-theia.heroku.com.s3.amazonaws.com/sites/4d7003605b30553c28000005/theme/fonts/breeregular-webfont.ttf') format('truetype'),
+         url('http://alpha-theia.heroku.com.s3.amazonaws.com/sites/4d7003605b30553c28000005/theme/fonts/breeregular-webfont.svg#webfontnUFwf05M') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*CSS*/
+body{background: #ee2e24;}
+.container-faq{width: 857px; margin: 0 auto; padding: 20px; background: #fff; }
+.container-faq h3{color:#ee2e24; font-family: 'Bree', verdana, Arial; font-size:25px;}
+
+/*Style Lista Ordenada*/
+ul#faq {font-size:12px; font-weight:bold;margin-left:10px; margin-top:15px;}
+ul#faq h4{color: #ee2e24;font-family: 'Bree', verdana, Arial;font-weight: normal; font-size: 17px;}
+ul#faq p{font-size:12px; font-weight:normal; line-height:20px; color: #616161; }
+ul#faq li{padding:8px 0;}
+ul#faq li span{padding: 0 5px 0 0; display: block; float: left; padding:}
+ 

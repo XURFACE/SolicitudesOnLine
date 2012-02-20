@@ -1,0 +1,104 @@
+body {
+	height: 100%;
+}
+.modal-overlay {
+	position: absolute;
+	height: expression(document.body.scrollHeight > document.body.offsetHeight ? document.body.scrollHeight : document.body.offsetHeight + 'px');
+}
+iframe.modal-overlay {
+	background: none;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	z-index: 100;
+}
+.modal-window {
+	position: absolute;
+	top: expression(document.documentElement.scrollTop + (document.documentElement.clientHeight / 2) + 'px');
+}
+.close-window {
+	background-image: url();
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src=images/sprite-icons-extra.png,sizingMethod=crop);
+}
+
+
+
+
+/*----styele  ie6 ie7 ie8 formularios---*/
+
+.column-row1{float:left;width:150px;}
+.column-row1 label{float:right; line-height:25px;}
+
+.column-row2{float:left;padding-left:35px;
+} 
+.column-row2 p{color:#cd3128; font-size:10px; text-align:center;} 
+.column-row2 hr{width:260px;border:1px solid #cccccc;} 
+.column-row2 .textBox{width:250px;border:1px solid #b4b2b2;padding-left:5px;height:25px;padding-top:5px;}
+.column-row2 .textBox:focus{border:1px solid #cd3128;}
+.column-row2 input[type=radio] {margin-left:20px;}
+.column-row2 input[type=checkbox] {margin-left:20px;}
+.column-row2 select {width:250px;height:25px; border:1px solid #b4b2b2;padding-left:5px;}
+
+.conten-solicitud .column-row1{width:350px;}
+.conten-solicitud .column-row2 .textBox{width:350px;}
+.conten-solicitud .column-row2 h3{color:#000;}
+.conten-solicitud .column-row1 span {float:right; color:#CD3128; line-height:25px; margin-left:5px;}
+.conten-solicitud select {width:380px;height:30px; border:1px solid #b4b2b2;padding-left:5px;}
+.conten-solicitud .column-row2 hr{width:380px;}
+.sub-from .column-row1{ width:425px;}
+
+.sub-from .column-row2 .textBox{width:300px;}
+.sub-from .comboBox {width:305px;height:315px; border:1px solid #b4b2b2;padding-left:5px;}
+
+.form-right{float:left;width:400px;}
+.column-row3{float:left;width:100px;}
+.column-row3 label{float:right; line-height:25px;}
+
+.column-row4{float:right;padding-left:35px;} 
+.column-row4 p{color:#cd3128; font-size:10px; text-align:center;} 
+.column-row4 hr{width:260px;border:1px solid #cccccc;} 
+.column-row4 .textBox{width:200px;height:25px; border:1px solid #b4b2b2;padding-left:5px; padding-top:5px;}
+.column-row4 .textBox input:focus{border:1px solid #cd3128;}
+
+
+
+/* 2 text 1 buttom*/
+.column-row-textbtn {float:left;padding-left:35px;} 
+.column-row-textbtn .textBox{width:165px;height:25px; border:1px solid #b4b2b2;padding-left:5px;}
+.column-row-textbtn .textBox:focus{border:1px solid #cd3128;}
+/* 1 text 1 buttom*/
+
+.column-row-btn {float:left;padding-left:35px;} 
+.column-row-btn .textBox{width:340px;height:25px; border:1px solid #b4b2b2;padding-left:5px;}
+.column-row-btn .textBox:focus{border:1px solid #cd3128;}
+
+.messbox{ width:260px; border:1px solid #d89490;float:right;margin-right:5px;margin-top:10px;margin-bottom:10px;padding-bottom:5px;}
+.messbox ul li{  list-style-type:square; list-style-position:inside;  color:#a45d59;margin-top:5px;margin-left:10px;}
+.conten-header{float:right;width:255px;}
+.conten-header a{ text-align:center; line-height:25px; margin-right:15px;margin-top:10px;margin-bottom:10px;border:none; background:url("../images/button-sprite.png"); background-position: 0px 0px; background-repeat:no-repeat; width:110px; height:33px; color:#fff;}
+.conten-header a:hover{ background-position:0px -34px;}
+.buttom-conten .buttom-left {float:left; margin-left:50px; margin-bottom:50px; margin-top:50px;}
+.buttom-conten .buttom-right{float:right;margin-right:50px;margin-bottom:50px;margin-top:50px;}
+buttom-conten
+
+.buttom-conten .btn-sumit{margin-right:15px;margin-top:10px;margin-bottom:10px;border:none; background:url("../images/button-sprite.png"); background-position: 0px 0px; background-repeat:no-repeat; width:110px; height:33px; color:#fff;}
+.buttom-conten .btn-sumit input:hover{ background-position:0px -34px;}
+.conten-header .btn-sumit{margin-right:15px;margin-top:10px;margin-bottom:10px;border:none; background:url("../images/button-sprite.png"); background-position: 0px 0px; background-repeat:no-repeat; width:110px; height:33px; color:#fff;}
+.conten-header .btn-sumit input:hover{ background-position:0px -34px;}
+
+
+ .mGrid tr.over td, tr td a.btnupdate{width:12px; height:12px; background: url(../images/edit.off.gif);background-repeat: no-repeat;vertical-align: middle;margin-right:5px;background-position:Inherited; }		
+  .mGrid tr.over td, tr td a.btnupdate:hover {width:12px; height:12px; background: url(../images/edit.on.gif);background-repeat: no-repeat;vertical-align: middle;margin-right:5px;background-position:Inherited;  }	
+.mGrid tr.over td, tr td a.historia { background: url(../images/historial-off.gif);background-repeat: no-repeat; margin-left:12px;}
+    .mGrid tr.over td, tr td a.historia:hover {background: url(../images/historial-on.gif);background-repeat: no-repeat; margin-left:12px;}
+    .mGrid tr.over td, tr td a.detalle {background: url(../images/detalle-off.gif);background-repeat: no-repeat; margin-left:12px;}
+    .mGrid tr.over td, tr td a.detalle:hover {background: url(../images/detalle-on.gif);background-repeat: no-repeat; margin-left:12px;}
+/
+a.btndelet{background-image: url(../images/icons-solicutudes-peruinfo.png);background-position:-12px 0px;background-repeat: no-repeat;vertical-align: middle;margin-right:5px;background-position:Inherited; }		
+a.btndelet:hover {background-position:0px 0px; }		
+	
+
+#header-content .menu-left {
+    float: left;
+    margin-top: -60px;
+}	
+	

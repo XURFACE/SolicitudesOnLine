@@ -1,0 +1,47 @@
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="addProd.aspx.vb" Inherits="mdlRegistro_addProd" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Label ID="Label1" runat="server" Text="Marca"></asp:Label>
+        *<asp:TextBox ID="txtMarca"
+            runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="rfvMarca" runat="server" 
+            ControlToValidate="txtMarca" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+        <br />
+        <asp:Label ID="Label2" runat="server" Text="Nombre"></asp:Label>
+        *<asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+            ControlToValidate="txtNombre" ErrorMessage="*" ForeColor="Red"></asp:RequiredFieldValidator>
+        <br />
+        <asp:Label ID="Label3" runat="server" Text="Porcentaje de fabricacion"></asp:Label>
+        *<asp:TextBox ID="txtPorcFabri" runat="server"></asp:TextBox>
+        <asp:RegularExpressionValidator ID="revPF" runat="server" 
+            ControlToValidate="txtPorcFabri" ErrorMessage="*" ForeColor="Red" 
+            ValidationExpression="^[0-9]+(\.[0-9]+)?$"></asp:RegularExpressionValidator>
+        <br />
+        <asp:Label ID="Label4" runat="server" Text="Porcentaje de unidades vendidas"></asp:Label>
+        *<asp:TextBox ID="txtPorcUnd" runat="server"></asp:TextBox>
+        <asp:RegularExpressionValidator ID="revPUV" runat="server" 
+            ControlToValidate="txtPorcUnd" ErrorMessage="*" ForeColor="Red" 
+            ValidationExpression="^[0-9]+(\.[0-9]+)?$"></asp:RegularExpressionValidator>
+        <br />
+        <asp:Label ID="Label5" runat="server" Text="Porcentaje de valor de venta"></asp:Label>
+        *<asp:TextBox ID="txtPorcValVnt" runat="server"></asp:TextBox>
+        <asp:RegularExpressionValidator ID="rfvPvv" runat="server" 
+            ControlToValidate="txtPorcValVnt" ErrorMessage="*" ForeColor="Red" 
+            ValidationExpression="^[0-9]+(\.[0-9]+)?$"></asp:RegularExpressionValidator>
+        <br />
+        <br />
+        <asp:Button ID="btn_add" runat="server" Text="Agregar"  />
+        <asp:Button ID="bnt_cancelar" runat="server" Text="Cancelar" OnClientClick="parent.$.modal().close()" />
+    </div>
+    </form>
+</body>
+</html>

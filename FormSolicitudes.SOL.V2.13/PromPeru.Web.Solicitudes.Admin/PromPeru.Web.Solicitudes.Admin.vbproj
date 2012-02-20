@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{2B5CA87C-EE7D-4FB7-BC95-3C69F0861978}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PromPeru.Web.Solicitudes.Admin</RootNamespace>
+    <AssemblyName>PromPeru.Web.Solicitudes.Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>PromPeru.Web.Solicitudes.Admin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>PromPeru.Web.Solicitudes.Admin.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FUA, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\MarcaPais\Desarrollo\FUA.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Common\main.aspx" />
+    <Content Include="css\fonts.css" />
+    <Content Include="css\modal-window-ie6.css" />
+    <Content Include="css\modal-window.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\styles_full.css" />
+    <Content Include="css\_style.css" />
+    <Content Include="Ejemplos\wfrm_Ejemplo.aspx" />
+    <Content Include="Ejemplos\wfrm_ListEjemplo.aspx" />
+    <Content Include="images\acceder.png" />
+    <Content Include="images\arrow-dropdownlist.png" />
+    <Content Include="images\bg-content.png" />
+    <Content Include="images\bg-dropbownlist.png" />
+    <Content Include="images\bg-schedule.png" />
+    <Content Include="images\btn_examinar.png" />
+    <Content Include="images\buttom-salir.png" />
+    <Content Include="images\button-exportar.png" />
+    <Content Include="images\button-sprite.png" />
+    <Content Include="images\close.png" />
+    <Content Include="images\delet-off.gif" />
+    <Content Include="images\delet-on.gif" />
+    <Content Include="images\detalle-off.gif" />
+    <Content Include="images\detalle-on.gif" />
+    <Content Include="images\edit.off.gif" />
+    <Content Include="images\edit.on.gif" />
+    <Content Include="images\favicon.ico" />
+    <Content Include="images\grd_head.png" />
+    <Content Include="images\historial-off.gif" />
+    <Content Include="images\historial-on.gif" />
+    <Content Include="images\icons-solicutudes-peruinfo.png" />
+    <Content Include="images\imagen.PNG" />
+    <Content Include="images\jpeg.jpg" />
+    <Content Include="images\login-logo.png" />
+    <Content Include="images\login-top-banner.png" />
+    <Content Include="images\logo-marcaperu.png" />
+    <Content Include="images\pixel.gif" />
+    <Content Include="images\sprint-buttom-home.png" />
+    <Content Include="images\sprite-button-navi.png" />
+    <Content Include="images\sprite-button.png" />
+    <Content Include="images\sprite-icons-extra.png" />
+    <Content Include="images\sprite-rd-ck.png" />
+    <Content Include="images\sprite-table.png" />
+    <Content Include="images\transparent.gif" />
+    <Content Include="images\tras-logo-marcaperu.png" />
+    <Content Include="images\uso-marca.jpg" />
+    <Content Include="images\view-off.gif" />
+    <Content Include="images\zoom.gif" />
+    <Content Include="index.aspx" />
+    <Content Include="js\application.js" />
+    <Content Include="js\bree_rg_400.font.js" />
+    <Content Include="js\cufon-yui.js" />
+    <Content Include="js\inputfile\jquery.si.css" />
+    <Content Include="js\inputfile\jquery.si.js" />
+    <Content Include="js\jquery-1.3.2.min.js" />
+    <Content Include="js\jquery-1.5.1.min.js" />
+    <Content Include="js\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="js\modal-window.min.js" />
+    <Content Include="Licenciatarios\uc_newClientUser.ascx" />
+    <Content Include="Licenciatarios\wfrm_lstLicenciatario.aspx" />
+    <Content Include="Licenciatarios\wfrm_Usuario.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="MailsMasivo\wfrm_MailMasivo.aspx" />
+    <Content Include="resources\logo-marcaperu.jpg" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Solicitudes\So-ingr-pupop.aspx" />
+    <Content Include="Solicitudes\wfrmHistorial.aspx" />
+    <Content Include="Solicitudes\wfrm_AddDocuments.aspx" />
+    <Content Include="Solicitudes\wfrm_Afiche.aspx" />
+    <Content Include="Solicitudes\wfrm_CmbEstado.aspx" />
+    <Content Include="Solicitudes\wfrm_DetalleSolicitud.aspx" />
+    <Content Include="Solicitudes\wfrm_solicitudes.aspx" />
+    <Content Include="Users\wfrm_DataUser.aspx" />
+    <Content Include="Users\wfrm_password.aspx" />
+    <Content Include="Users\wfrm_users.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\main.aspx.designer.vb">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\main.aspx.vb">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ejemplos\wfrm_Ejemplo.aspx.designer.vb">
+      <DependentUpon>wfrm_Ejemplo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ejemplos\wfrm_Ejemplo.aspx.vb">
+      <DependentUpon>wfrm_Ejemplo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ejemplos\wfrm_ListEjemplo.aspx.designer.vb">
+      <DependentUpon>wfrm_ListEjemplo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ejemplos\wfrm_ListEjemplo.aspx.vb">
+      <DependentUpon>wfrm_ListEjemplo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Licenciatarios\uc_newClientUser.ascx.designer.vb">
+      <DependentUpon>uc_newClientUser.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Licenciatarios\uc_newClientUser.ascx.vb">
+      <DependentUpon>uc_newClientUser.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Licenciatarios\wfrm_lstLicenciatario.aspx.designer.vb">
+      <DependentUpon>wfrm_lstLicenciatario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Licenciatarios\wfrm_lstLicenciatario.aspx.vb">
+      <DependentUpon>wfrm_lstLicenciatario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Licenciatarios\wfrm_Usuario.aspx.designer.vb">
+      <DependentUpon>wfrm_Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Licenciatarios\wfrm_Usuario.aspx.vb">
+      <DependentUpon>wfrm_Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.vb">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailsMasivo\wfrm_MailMasivo.aspx.designer.vb">
+      <DependentUpon>wfrm_MailMasivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailsMasivo\wfrm_MailMasivo.aspx.vb">
+      <DependentUpon>wfrm_MailMasivo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPages\MainMasterPage.Master.designer.vb">
+      <DependentUpon>MainMasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPages\MainMasterPage.Master.vb">
+      <DependentUpon>MainMasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Solicitudes\So-ingr-pupop.aspx.designer.vb">
+      <DependentUpon>So-ingr-pupop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitudes\So-ingr-pupop.aspx.vb">
+      <DependentUpon>So-ingr-pupop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitudes\wfrmHistorial.aspx.designer.vb">
+      <DependentUpon>wfrmHistorial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitudes\wfrmHistorial.aspx.vb">
+      <DependentUpon>wfrmHistorial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitudes\wfrm_AddDocuments.aspx.designer.vb">
+      <DependentUpon>wfrm_AddDocuments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitudes\wfrm_AddDocuments.aspx.vb">
+      <DependentUpon>wfrm_AddDocuments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitudes\wfrm_Afiche.aspx.designer.vb">
+      <DependentUpon>wfrm_Afiche.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitudes\wfrm_Afiche.aspx.vb">
+      <DependentUpon>wfrm_Afiche.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitudes\wfrm_CmbEstado.aspx.designer.vb">
+      <DependentUpon>wfrm_CmbEstado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitudes\wfrm_CmbEstado.aspx.vb">
+      <DependentUpon>wfrm_CmbEstado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitudes\wfrm_DetalleSolicitud.aspx.designer.vb">
+      <DependentUpon>wfrm_DetalleSolicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitudes\wfrm_DetalleSolicitud.aspx.vb">
+      <DependentUpon>wfrm_DetalleSolicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Solicitudes\wfrm_solicitudes.aspx.designer.vb">
+      <DependentUpon>wfrm_solicitudes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Solicitudes\wfrm_solicitudes.aspx.vb">
+      <DependentUpon>wfrm_solicitudes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\wfrm_DataUser.aspx.designer.vb">
+      <DependentUpon>wfrm_DataUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\wfrm_DataUser.aspx.vb">
+      <DependentUpon>wfrm_DataUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\wfrm_password.aspx.designer.vb">
+      <DependentUpon>wfrm_password.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\wfrm_password.aspx.vb">
+      <DependentUpon>wfrm_password.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\wfrm_users.aspx.designer.vb">
+      <DependentUpon>wfrm_users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\wfrm_users.aspx.vb">
+      <DependentUpon>wfrm_users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPages\MainMasterPage.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\FormSolicitudes.SOL.V2.13\Business Layer\Business_Components\Business_Components.vbproj">
+      <Project>{BE5332D7-9E33-469B-B7F1-B817B59CAEF9}</Project>
+      <Name>Business_Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FormSolicitudes.SOL.V2.13\Business Layer\Business_Entities\Business_Entities.vbproj">
+      <Project>{838A9B55-EE2A-4649-8E0D-5237A9CA0706}</Project>
+      <Name>Business_Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FormSolicitudes.SOL.V2.13\clsUTL_Helpers\clsUTL_Helpers.vbproj">
+      <Project>{A31749AC-D7A4-4CF9-830A-EC479D5AB76E}</Project>
+      <Name>clsUTL_Helpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FormSolicitudes.SOL.V2.13\PromPeru.Configuration\PromPeru.Configuration.vbproj">
+      <Project>{46B2B30B-E1D0-495F-B262-6550C0243108}</Project>
+      <Name>PromPeru.Configuration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>9522</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
