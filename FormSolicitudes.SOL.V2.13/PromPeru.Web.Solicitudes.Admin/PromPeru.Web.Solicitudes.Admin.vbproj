@@ -90,6 +90,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Common\main.aspx" />
+    <Content Include="css\blitzer\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="css\blitzer\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="css\blitzer\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="css\blitzer\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="css\blitzer\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="css\blitzer\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="css\blitzer\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="css\blitzer\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="css\blitzer\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="css\blitzer\images\ui-icons_004276_256x240.png" />
+    <Content Include="css\blitzer\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="css\blitzer\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="css\blitzer\jquery-ui-1.7.3.custom.css" />
     <Content Include="css\fonts.css" />
     <Content Include="css\modal-window-ie6.css" />
     <Content Include="css\modal-window.css" />
@@ -144,6 +157,7 @@
     <Content Include="js\inputfile\jquery.si.js" />
     <Content Include="js\jquery-1.3.2.min.js" />
     <Content Include="js\jquery-1.5.1.min.js" />
+    <Content Include="js\jquery-ui-1.7.3.custom.min.js" />
     <Content Include="js\jquery.fancybox-1.3.4.pack.js" />
     <Content Include="js\modal-window.min.js" />
     <Content Include="Licenciatarios\uc_newClientUser.ascx" />

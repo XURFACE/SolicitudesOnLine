@@ -1,0 +1,45 @@
+ALTER PROCEDURE [dbo].[up_SOLICITUD_CRIT_SEARCH]
+	-- addParametros 	
+	@pTIPOEMPRESA varchar(60),
+	@pRAZONSOCIAL varchar(150),
+	@pRUC nchar(11),
+	@pTIPLICInst varchar(30),
+	@pTIPLICProd varchar(30),
+	@pTIPLICEvent varchar(30),
+	@pSTSSOL nchar(60)
+	--fecha de inicio dee registro, fecha de fin de registro
+	--fecha de inicio dee aceptacion, fecha de fin de aceptacion
+	
+	
+AS
+BEGIN
+SELECT 
+		SOLICITUD.ID AS IDSOL,
+		SOLICITUD.TIPOLIC,
+		SOLICITUD.STSSOL,
+		SOLICITUD.INITDATE,
+		SOLICITUD.ENDDATE,
+		EMPRESA.ID AS IDEMP,
+		EMPRESA.RAZONSOCIAL,
+		EMPRESA.GIRO,
+		EMPRESA.NOMBREPROGRAMASOCIAL,
+		EMPRESA.OBJETIVO,
+		EMPRESA.TIPO_EMPRESA,
+		EMPRESA.GIRO,
+		EMPRESA.COD_DPTO
+	FROM SOLICITUD INNER JOIN 
+		 EMPRESA
+		 ON SOLICITUD.IDEMP = EMPRESA.ID
+	order by EMPRESA.RAZONSOCIAL
+WHERE (LTRIM(Rtrim(upper(EMPRESA.TIPO_EMPRESA))) like @pTIPOEMPRESA OR @pTIPOEMPRESA IS NULL) AND
+		  (upper(EMPRESA.RAZONSOCIAL) LIKE '%'+@pRAZONSOCIAL+'%' OR @pRAZONSOCIAL IS NULL) AND
+		  (Rtrim(ltrim(EMPRESA.RUC)) LIKE Rtrim(ltrim(@pRUC)) OR @pRUC IS NULL) AND
+		  (Rtrim(ltrim(SOLICITUD.STSSOL)) = @pSTSSOL OR @pSTSSOL IS NULL) AND
+		  ((SOLICITUD.TIPOLIC like @pTIPLICInst or @pTIPLICInst is null) or
+		  (SOLICITUD.TIPOLIC like @pTIPLICProd or @pTIPLICProd is null) or
+		  (SOLICITUD.TIPOLIC like @pTIPLICEvent or @pTIPLICEvent is null))
+	order by EMPRESA.RAZONSOCIAL
+SET @Err = @@Error 
+--PRINT @ERR
+RETURN @Err 
+END

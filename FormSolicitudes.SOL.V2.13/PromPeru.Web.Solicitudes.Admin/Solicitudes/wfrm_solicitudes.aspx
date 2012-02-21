@@ -2,6 +2,41 @@
     CodeBehind="wfrm_solicitudes.aspx.vb" Inherits="PromPeru.Web.Solicitudes.Admin.wfrm_solicitudes1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+
+    <link href="<%= Page.ResolveClientUrl("~/css/blitzer/jquery-ui-1.7.3.custom.css") %>" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="<%= Page.ResolveClientUrl("~/js/jquery-ui-1.7.3.custom.min.js") %>" ></script>
+	<script type="text/javascript">
+
+	    $(document).ready(function () {
+
+	        // Datepicker
+
+	        $(".calendarApro").datepicker();
+	        $(".calendarReg").datepicker();
+	        // Activar/desactivar los campos de calendario
+	        $("#ctl00_ContentPlaceHolder1_chkFechRegistro").click(function (e) {
+	            if ($("#ctl00_ContentPlaceHolder1_chkFechRegistro").attr("checked")) {
+	                $(".calendarReg").removeAttr("disabled");
+	            }
+	            else {
+	                $(".calendarReg").attr("disabled", "disabled");
+	            }
+	        })
+
+	        $("#ctl00_ContentPlaceHolder1_chkFechAprovacion").click(function (e) {
+	            if ($("#ctl00_ContentPlaceHolder1_chkFechAprovacion").attr("checked")) {
+	                $(".calendarApro").removeAttr("disabled");
+	            }
+	            else {
+	                $(".calendarApro").attr("disabled", "disabled");
+	            }
+	        })
+
+	    });
+	</script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="content-body">
@@ -80,6 +115,35 @@
                     <asp:ListItem Value="8">SUSPENDIDO POR DEUDA</asp:ListItem>
                     <asp:ListItem Value="9">CADUCADO</asp:ListItem>
                 </asp:DropDownList>
+                </td>
+            </tr>
+             <tr>
+                <td>
+                        <br />
+                </td>
+                <td colspan="2">
+                 <asp:CheckBox ID="chkFechRegistro" runat="server" Text="Feha de Registro" />
+                <br />
+                <asp:Label ID="Label4" runat="server" Text="Desde"></asp:Label>
+                <asp:TextBox ID="txtFechaRegistroDesde" runat="server" Enabled="False" 
+                    CssClass="calendarReg"></asp:TextBox>
+                <br />
+                <asp:Label ID="Label5" runat="server" Text="Hasta"></asp:Label>
+                <asp:TextBox ID="txtFechaRegistroHasta" runat="server" Enabled="False" 
+                    CssClass="calendarReg"></asp:TextBox>
+                    
+                </td>
+         <td colspan="2">
+               <asp:CheckBox ID="chkFechAprovacion" runat="server" 
+                        Text="Fecha de aprovacion" />
+                    <br />
+                    <asp:Label ID="Label2" runat="server" Text="Desde"></asp:Label>
+                    <asp:TextBox ID="txtFechaAprovacionDesde" runat="server" Enabled="False" 
+                        CssClass="calendarApro"></asp:TextBox>
+                    <br />
+                    <asp:Label ID="Label3" runat="server" Text="Hasta"></asp:Label>
+                    <asp:TextBox ID="txtFechaAprovacionHasta" runat="server" Enabled="False" 
+                        CssClass="calendarApro"></asp:TextBox>
                 </td>
             </tr>
             <tr>
