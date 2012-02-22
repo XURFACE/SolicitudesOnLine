@@ -427,10 +427,10 @@ Namespace MP.DW.DAL.DALC
                 Me.DataBase.AddInParameter(command, "@pTIPLICEvent", DbType.String, CnullMP(evento))
                 Me.DataBase.AddInParameter(command, "@pSTSSOL", DbType.String, CnullMP(xstrStsSol))
                 'fechas
-                Me.DataBase.AddInParameter(command, "@initDateDesde", DbType.DateTime, initDateDesde)
-                Me.DataBase.AddInParameter(command, "@initDateHasta", DbType.DateTime, initDateHasta)
-                Me.DataBase.AddInParameter(command, "@endDateDesde", DbType.DateTime, endDateDesde)
-                Me.DataBase.AddInParameter(command, "@endDateHasta", DbType.DateTime, endDateHasta)
+                Me.DataBase.AddInParameter(command, "@regDateDesde", DbType.DateTime, initDateDesde)
+                Me.DataBase.AddInParameter(command, "@regDateHasta", DbType.DateTime, initDateHasta)
+                Me.DataBase.AddInParameter(command, "@acepDateDesde", DbType.DateTime, endDateDesde)
+                Me.DataBase.AddInParameter(command, "@acepDateHasta", DbType.DateTime, endDateHasta)
 
                 'command.Parameters(0).Value.ToString()
                 'For Each para In command.Parameters

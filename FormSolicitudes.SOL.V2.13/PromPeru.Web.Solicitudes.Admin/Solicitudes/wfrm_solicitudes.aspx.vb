@@ -26,7 +26,7 @@ Public Class wfrm_solicitudes1
 
         Dim culture As String = "en-US"
         Dim fechDesde As String = "01/01/1980"
-        Dim fechHasta As String = "10/10/2020" '"12/31/2020 23:59:29 999"
+        Dim fechHasta As String = Date.Now.ToString(Globalization.CultureInfo.CreateSpecificCulture(culture)) '"10/10/2020" '"12/31/2020 23:59:29 999"
         Dim fechaAproDesde As Date = Date.Parse(fechDesde, Globalization.CultureInfo.CreateSpecificCulture(culture))  'CDate(fechDesde)
         Dim fechaAproHasta As Date = Date.Parse(fechHasta, Globalization.CultureInfo.CreateSpecificCulture(culture))
         Dim fechaRegDesde As Date = Date.Parse(fechDesde, Globalization.CultureInfo.CreateSpecificCulture(culture))
