@@ -258,6 +258,19 @@ Namespace MP.DW.BL.BC
                 Throw ex
             End Try
         End Function
+        Public Function LeerSearchToDTSOLICITUDCriterDateRange(ByVal tipoEmp As String, ByVal razonSoc As String, ByVal Inst As String,
+                                                      ByVal Prod As String, ByVal evento As String, ByVal xstrRUC As String, _
+                                                      ByVal xstrStsSol As String, ByVal d1 As Date, ByVal d2 As Date, ByVal d3 As Date,
+                                                      ByVal d4 As Date) As DataTable
+            Try
+                oDTSOLICITUD = oDALCSOLICITUDRO.LeerSearchToDTSOLICITUDCriterDateRange(tipoEmp, razonSoc, Inst, Prod, evento, xstrRUC,
+                                                                                    xstrStsSol, d1, d2, d3, d4)
+                Return oDTSOLICITUD
+            Catch ex As Exception
+                Throw ex
+            End Try
+        End Function
+
 
         Public Function LeerSearchToDTSOLICITUDCriterLst() As DataTable
             Try

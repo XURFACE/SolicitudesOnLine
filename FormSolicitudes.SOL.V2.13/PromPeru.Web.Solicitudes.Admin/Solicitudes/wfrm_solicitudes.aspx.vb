@@ -24,6 +24,14 @@ Public Class wfrm_solicitudes1
         Dim producto As String = ""
         Dim evento As String = ""
 
+        Dim culture As String = "en-US"
+        Dim fechDesde As String = "01/01/1980"
+        Dim fechHasta As String = "10/10/2020" '"12/31/2020 23:59:29 999"
+        Dim fechaAproDesde As Date = Date.Parse(fechDesde, Globalization.CultureInfo.CreateSpecificCulture(culture))  'CDate(fechDesde)
+        Dim fechaAproHasta As Date = Date.Parse(fechHasta, Globalization.CultureInfo.CreateSpecificCulture(culture))
+        Dim fechaRegDesde As Date = Date.Parse(fechDesde, Globalization.CultureInfo.CreateSpecificCulture(culture))
+        Dim fechaRegHasta As Date = Date.Parse(fechHasta, Globalization.CultureInfo.CreateSpecificCulture(culture))
+        
         If rbPerJur.Checked Then
             tipoEmpresa = "PERSONA JURÍDICA"
         ElseIf rbPerNat.Checked Then
@@ -55,8 +63,36 @@ Public Class wfrm_solicitudes1
                 End If
             Next
         End If
+        If chkFechAprovacion.Checked Then
+            If txtFechaAprovacionDesde.Text.Length > 0 Then
+                fechaAproDesde = Date.Parse(txtFechaAprovacionDesde.Text, Globalization.CultureInfo.CreateSpecificCulture(culture))
+            End If
+            If txtFechaAprovacionHasta.Text.Length > 0 Then
+                fechaAproHasta = Date.Parse(txtFechaAprovacionHasta.Text, Globalization.CultureInfo.CreateSpecificCulture(culture))
+            End If
 
-        Return objSOLICITUDRO.LeerSearchToDTSOLICITUDCriter(tipoEmpresa, razonSocial, tipolic(0), tipolic(1), tipolic(2), txtRUC.Text, IIf(dllCamEst.SelectedIndex = 0, "", dllCamEst.SelectedItem.Text))
+        End If
+
+        If chkFechRegistro.Checked Then
+            If txtFechaRegistroDesde.Text.Length > 0 Then
+                fechaRegDesde = Date.Parse(txtFechaRegistroDesde.Text, Globalization.CultureInfo.CreateSpecificCulture(culture))
+            End If
+            If txtFechaRegistroHasta.Text.Length > 0 Then
+                fechaRegHasta = Date.Parse(txtFechaRegistroHasta.Text, Globalization.CultureInfo.CreateSpecificCulture(culture))
+            End If
+
+        End If
+
+        'Return objSOLICITUDRO.LeerSearchToDTSOLICITUDCriter(
+        '    tipoEmpresa, razonSocial, tipolic(0), tipolic(1), tipolic(2),
+        '    txtRUC.Text, IIf(dllCamEst.SelectedIndex = 0, "",
+        '    dllCamEst.SelectedItem.Text))
+
+        Return objSOLICITUDRO.LeerSearchToDTSOLICITUDCriterDateRange(
+           tipoEmpresa, razonSocial, tipolic(0), tipolic(1), tipolic(2),
+           txtRUC.Text, IIf(dllCamEst.SelectedIndex = 0, "",
+           dllCamEst.SelectedItem.Text), fechaRegDesde, fechaRegHasta,
+           fechaAproDesde, fechaAproHasta)
     End Function
     Private Sub cargarGrid(Optional ByVal dt As DataTable = Nothing)
         If IsNothing(dt) Then

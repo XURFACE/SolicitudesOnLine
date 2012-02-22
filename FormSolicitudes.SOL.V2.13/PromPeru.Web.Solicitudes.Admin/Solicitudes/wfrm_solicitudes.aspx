@@ -33,7 +33,12 @@
 	                $(".calendarApro").attr("disabled", "disabled");
 	            }
 	        })
-
+	        if ($("#ctl00_ContentPlaceHolder1_chkFechRegistro").attr("checked")) {
+	            $(".calendarReg").removeAttr("disabled");
+	        }
+	        if ($("#ctl00_ContentPlaceHolder1_chkFechAprovacion").attr("checked")) {
+	            $(".calendarApro").removeAttr("disabled");
+	        }
 	    });
 	</script>
 
@@ -172,8 +177,10 @@
             <Columns>
                 <asp:BoundField HeaderText="Empresa" DataField="RAZONSOCIAL" />
                 <asp:BoundField HeaderText="Giro" DataField="GIRO" />
+                <asp:BoundField DataField="NOMBRE_LARGO" HeaderText="Region" />
                 <asp:BoundField HeaderText="Uso" DataField="TIPOLIC" />
                 <asp:BoundField HeaderText="Estado" DataField="STSSOL" />
+                <asp:BoundField DataField="DIAS" HeaderText="Dias" />
                 <asp:BoundField HeaderText="Programa de Responsabilidad Social" DataField="NOMBREPROGRAMASOCIAL" />
                 <asp:BoundField HeaderText="Impulsa a:" DataField="OBJETIVO" />
                 <asp:TemplateField HeaderText="Opciones">

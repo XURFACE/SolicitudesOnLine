@@ -411,6 +411,52 @@ Namespace MP.DW.DAL.DALC
 
             Return oDTSOLICITUD
         End Function
+
+        Public Function LeerSearchToDTSOLICITUDCriterDateRange(ByVal tipoEmp As String, ByVal razonSoc As String, ByVal Inst As String,
+                                        ByVal Prod As String, ByVal evento As String, ByVal xstrRUC As String, ByVal xstrStsSol As String,
+                                        ByVal initDateDesde As Date, ByVal initDateHasta As Date, ByVal endDateDesde As Date,
+                                        ByVal endDateHasta As Date) As DataTable
+            Dim oDTSOLICITUD As New DataTable
+            Using command As DbCommand = Me.DataBase.GetStoredProcCommand("up_SOLICITUD_CRIT_SEARCH_DATA_RANGE")
+                'Atributos de paged
+                Me.DataBase.AddInParameter(command, "@pTIPOEMPRESA", DbType.String, CnullMP(CstrIgnoreAccentoMP(tipoEmp)))
+                Me.DataBase.AddInParameter(command, "@pRAZONSOCIAL", DbType.String, CnullMP(CstrIgnoreAccentoMP(razonSoc)))
+                Me.DataBase.AddInParameter(command, "@pRUC", DbType.String, CnullMP(xstrRUC))
+                Me.DataBase.AddInParameter(command, "@pTIPLICInst", DbType.String, CnullMP(Inst))
+                Me.DataBase.AddInParameter(command, "@pTIPLICProd", DbType.String, CnullMP(Prod))
+                Me.DataBase.AddInParameter(command, "@pTIPLICEvent", DbType.String, CnullMP(evento))
+                Me.DataBase.AddInParameter(command, "@pSTSSOL", DbType.String, CnullMP(xstrStsSol))
+                'fechas
+                Me.DataBase.AddInParameter(command, "@initDateDesde", DbType.DateTime, initDateDesde)
+                Me.DataBase.AddInParameter(command, "@initDateHasta", DbType.DateTime, initDateHasta)
+                Me.DataBase.AddInParameter(command, "@endDateDesde", DbType.DateTime, endDateDesde)
+                Me.DataBase.AddInParameter(command, "@endDateHasta", DbType.DateTime, endDateHasta)
+
+                'command.Parameters(0).Value.ToString()
+                'For Each para In command.Parameters
+                'MsgBox(para.ToString + ">>> " + para.Value.ToString)
+                'Next
+
+
+
+                'MsgBox(">>>" + initDateDesde.ToString)
+                'MsgBox(">>>" + initDateHasta.ToString)
+                'MsgBox(">>>" + endDateDesde.ToString)
+                'MsgBox(">>>" + endDateHasta.ToString)
+
+                Using ds As DataSet = Me.DataBase.ExecuteDataSet(command)
+
+                    If ds.Tables.Count.Equals(0) Then
+                        Return Nothing
+                    Else
+                        'MsgBox("hay :" + ds.Tables(0).Rows.Count.ToString)
+                        Return ds.Tables(0)
+                    End If
+                End Using
+            End Using
+
+            Return oDTSOLICITUD
+        End Function
         Public Function LeerSearchToDTSOLICITUDCriterLst() As DataTable
             Dim oDTSOLICITUD As New DataTable
             Using command As DbCommand = Me.DataBase.GetStoredProcCommand("up_SOLICITUD_CRIT_SEARCH_SELLST")
@@ -428,7 +474,7 @@ Namespace MP.DW.DAL.DALC
         End Function
 
 
-	End Class
+    End Class
 #End Region
 End Namespace
 
