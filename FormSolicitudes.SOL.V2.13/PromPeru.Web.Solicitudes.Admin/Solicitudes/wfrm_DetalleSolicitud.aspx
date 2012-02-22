@@ -178,6 +178,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+  <%Dim idSol As String%>
     <br />
     <table class="table-content-form" style="width: 96%;">
         <tr>
@@ -868,11 +869,32 @@
         </tr>
         <tr>
             <td>
-                &nbsp;
+
+                <% 
+                   
+
+                    If Not IsNothing(Request.QueryString("idSol")) Then
+                        idSol = CType(Request.QueryString("idSol"), Int64).ToString
+                    End If
+      
+                    
+                %>
             </td>
             <td colspan="2" style="text-align:center">
+
+                --
                 <div class="buttom-popup" style="text-align: center; width: 100%;">
-                    <asp:Button ID="btnSolicitar" runat="server" Style="margin-left: 0px;" Text="Enviar Solicitud" /></div>
+                    <a class="a-buttom" title="Cambiar Estado" 
+                        href = "wfrm_CmbSendMail.aspx?idSol=<%=idsol%>" 
+                        onclick="$(this).modal({width:620, height:600}).open(); return false;">
+                    Enviar Solicitud
+                </a>
+                 </div>
+                 <!--
+                <div class="buttom-popup" style="text-align: center; width: 100%;">
+                    <asp:Button ID="btnSolicitar" runat="server" Style="margin-left: 0px;" Text="Enviar Solicitud" />
+                </div>
+                -->
                 <asp:Literal ID="ltrMsg" runat="server"></asp:Literal>
             </td>
         </tr>

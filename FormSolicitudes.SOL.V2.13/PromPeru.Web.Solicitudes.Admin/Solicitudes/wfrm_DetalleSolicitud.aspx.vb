@@ -320,6 +320,9 @@ Public Class wfrm_DetalleSolicitud
             SendSimpleMessage("Marca país - Archivos adicionales", txtmail.Text, "", "Se requiere archivos adicionales", "&nbsp;",
                               String.Format(strBody, strbl.ToString), _
                               ConfigurationManager.AppSettings("ServerSMTP"), ConfigurationManager.AppSettings("PortSMTP"))
+            MsgBox("Marca país - Archivos adicionales-" + txtmail.Text + "-" + "Se requiere archivos adicionales" + "&nbsp;" +
+                              String.Format(strBody, strbl.ToString))
+
         Catch ex As Exception
             ltrMsg.Text = Formatomsgerr(ex.Message.Split(New Char() {"/"}, StringSplitOptions.RemoveEmptyEntries))
         End Try
